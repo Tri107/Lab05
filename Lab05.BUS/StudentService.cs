@@ -8,17 +8,21 @@ using System.Data.Entity;
 using System.Data.Entity.Migrations;
 
 
+
 namespace Lab05.BUS
 {
     public class StudentService
     {
         public List<Student> GetAll()
         {
-            StudentModel context = new StudentModel();
-            return context.Students.ToList();
+            using (var context = new StudentModel())
+            {
+                return context.Students.ToList();
+
+            }
         }
 
-        public List<Student> GetAllHasNoMajor()
+            public List<Student> GetAllHasNoMajor()
         {
             StudentModel context = new StudentModel();
             return context.Students.Where(p => p.MajorID == null).ToList();
@@ -42,6 +46,8 @@ namespace Lab05.BUS
             context.Students.AddOrUpdate(s);
             context.SaveChanges();
         }
+
+        
 
     }
 }

@@ -11,8 +11,10 @@ namespace Lab05.BUS
     {
         public List<Major> GetAllByFaculty(int facultyID)
         {
-            StudentModel context = new StudentModel();
-            return context.Majors.Where(p => p.FacultyID == facultyID).ToList();
+            using (StudentModel context = new StudentModel()) 
+            {
+                return context.Majors.Where(p => p.FacultyID == facultyID).ToList();
+            }
         }
     }
 }

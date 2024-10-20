@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmQLGS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLGS.Designer.cs">
+      <DependentUpon>frmQLGS.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQuanLyKhoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,12 @@
     </Compile>
     <Compile Include="frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearch.Designer.cs">
+      <DependentUpon>frmSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,6 +102,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -114,6 +127,15 @@
       <Project>{3c7b57c2-7ea4-415f-9983-f901f47185f6}</Project>
       <Name>Lab05.DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manageicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\findicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1000_F_265248994_C8xCcTYPixr20R8nrX2BL26FDOkS0xp3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
